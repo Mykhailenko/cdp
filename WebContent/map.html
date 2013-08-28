@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jVectorMap demo</title>
+  <link rel="stylesheet" href="jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
+  <script src="jquery-1.10.2.js"></script>
+  <script src="jquery-jvectormap-1.2.2.min.js"></script>
+  <script src="jquery-jvectormap-world-mill-en.js"></script>
+  <script type='text/javascript' src="./data_statistic.js"></script>
+  <script type='text/javascript' src="./script.js" ></script>
+</head>
+<body>
+  <div id="world-map-gdp" style="width: 900px; height: 600px"></div>
+  <script>
+  var gdpData = generateDateForMap();
+    $('#world-map-gdp').vectorMap({
+    	  map: 'world_mill_en',
+    	  series: {
+    	    regions: [{
+    	      values: gdpData,
+    	      scale: ['#C8EEFF', '#0071A4'],
+    	      normalizeFunction: 'polynomial'
+    	    }]
+    	  },
+    	  onRegionLabelShow: function(e, el, code){
+    	    el.html(el.html()+' (GDP - '+gdpData[code]+')');
+    	  }
+    	});
+  </script>
+</body>
+</html>
