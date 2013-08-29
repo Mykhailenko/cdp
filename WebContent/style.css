@@ -10,3 +10,6 @@ form{
 	margin: 0 auto;
 	border: 1px solid white;
 }
+.invalidP {
+	background-color: #FB5E4D;
+}
