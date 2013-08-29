@@ -1,5 +1,10 @@
 body {
-	background-color: #505050;
+/* 	background-color: #505050; */
+}
+form{
+	margin: 0 auto;
+	border: 1px solid white;
+	width : 300px;
 }
 #world-map-gdp {
 	margin: 0 auto;

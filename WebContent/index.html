@@ -4,17 +4,19 @@
 <head>
 <meta charset='utf-8' />
 <title>Login Page</title>
-<script type='text/javascript' src='./Chart.js'></script>
-<script type='text/javascript' src='./jquery-1.10.2.js' ></script>
-<script type='text/javascript' src='./data_statistic.js'></script>
-<script type='text/javascript' src='./script.js' ></script>
 <link href='./style.css' rel='stylesheet' type='text/css' />
 </head>
 <body>
-<form action='/login' method='post' id='loginFormId' pattern="[A-Za-z]{3+}" >
-	Login: <input type='text' />
-	Password: <input type='text' />
-	<input type='button' title="login" />
+<form action='/login' method='post' id='loginFormId'   >
+	<p>
+		Логин: <input type='text' pattern="(?=.*\d)(?=.*[a-zA-Z]).{2,}" placeholder="логин" title="Хотябы одна буква и одна цифра" required="required" autofocus="autofocus"/>
+	</p>
+	<p>
+		Пароль: <input type='text' pattern="(?=.*\d)(?=.*[a-zA-Z]).{6,}" placeholder="пароль" title="Хотябы одна буква и одна цифра, длинна не менее 6 символов" required="required"/>
+	</p>
+	<p>
+		<input type='submit' title="Войти" value="Войти"/>
+	</p>
 </form>
 </body>
 </html>

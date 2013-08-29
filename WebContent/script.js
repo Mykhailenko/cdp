@@ -44,7 +44,7 @@ function generateDateForMap(){
 		var country = getCountryShortNameByCity(city);
 		countEmpoloyees = dataForYear[city];
 		if(generatedData[country] == undefined){
-			generatedData[country] = average(countEmpoloyees); 
+			generatedData[country] = average(countEmpoloyees);
 		}else{
 			generatedData[country] += average(countEmpoloyees); 
 		}
